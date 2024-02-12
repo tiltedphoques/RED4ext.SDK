@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/IScriptable.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/EntityID.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ECustomCameraTarget.hpp>
 #include <RED4ext/Scripting/Natives/Generated/RenderSceneLayerMask.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/IPlacedComponent.hpp>
@@ -18,7 +19,9 @@ struct Entity : IScriptable
     static constexpr const char* NAME = "entEntity";
     static constexpr const char* ALIAS = "Entity";
 
-    uint8_t unk40[0xB0 - 0x40]; // 40
+    uint8_t unk40[0x48 - 0x40]; // 40
+    EntityID id; // 48
+    uint8_t unk50[0xB0 - 0x50]; // 50
     IPlacedComponent* placedComponent; // B0
     uint8_t unkB8[0x154 - 0xB8]; // B8
     ECustomCameraTarget customCameraTarget; // 154
