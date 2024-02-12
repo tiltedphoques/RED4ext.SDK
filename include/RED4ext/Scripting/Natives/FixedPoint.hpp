@@ -19,7 +19,7 @@ struct FixedPoint
         return Bits * 0.0000076293945;
     }
 
-    operator float()
+    operator float() const
     {
         return AsFloat();
     }
