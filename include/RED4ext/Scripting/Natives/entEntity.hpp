@@ -9,6 +9,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ECustomCameraTarget.hpp>
 #include <RED4ext/Scripting/Natives/Generated/RenderSceneLayerMask.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/IPlacedComponent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/ComponentsStorage.hpp>
 
 namespace RED4ext
 {
@@ -21,7 +22,8 @@ struct Entity : IScriptable
 
     uint8_t unk40[0x48 - 0x40]; // 40
     EntityID id; // 48
-    uint8_t unk50[0xB0 - 0x50]; // 50
+    uint8_t unk50[0x70 - 0x50]; // 50
+    ComponentsStorage componentsStorage; // 70
     IPlacedComponent* placedComponent; // B0
     uint8_t unkB8[0x154 - 0xB8]; // B8
     ECustomCameraTarget customCameraTarget; // 154

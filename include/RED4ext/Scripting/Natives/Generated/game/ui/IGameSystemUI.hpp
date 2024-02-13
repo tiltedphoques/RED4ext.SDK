@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/IGameSystem.hpp>
+#include <RED4ext/Scripting/Natives/Generated/red/Event.hpp>
 
 namespace RED4ext
 {
@@ -16,6 +17,8 @@ struct IGameSystemUI : game::IGameSystem
 {
     static constexpr const char* NAME = "gameuiIGameSystemUI";
     static constexpr const char* ALIAS = "IUISystem";
+
+    virtual void QueueEvent(const Handle<red::Event>&);
 
 };
 RED4EXT_ASSERT_SIZE(IGameSystemUI, 0x48);

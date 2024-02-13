@@ -16,7 +16,7 @@ struct FixedPoint
 
     float AsFloat() const
     {
-        return Bits * 0.0000076293945;
+        return Bits * 0.0000076293945f;
     }
 
     operator float() const
@@ -26,7 +26,7 @@ struct FixedPoint
 
     FixedPoint& operator=(float value)
     {
-        Bits = value /  0.0000076293945;
+        Bits = static_cast<int32_t>(value / 0.0000076293945f);
         return *this;
     }
 
