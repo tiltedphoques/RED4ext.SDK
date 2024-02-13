@@ -9,6 +9,7 @@
 #include <RED4ext/Scripting/Natives/Generated/ECustomCameraTarget.hpp>
 #include <RED4ext/Scripting/Natives/Generated/RenderSceneLayerMask.hpp>
 #include <RED4ext/Scripting/Natives/Generated/ent/IPlacedComponent.hpp>
+#include <RED4ext/Scripting/Natives/Generated/ent/ComponentsStorage.hpp>
 
 namespace RED4ext
 {
