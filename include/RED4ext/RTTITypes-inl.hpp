@@ -360,8 +360,7 @@ RED4EXT_INLINE RED4ext::CProperty* RED4ext::CClass::GetProperty(CName aName)
 
 RED4EXT_INLINE void RED4ext::CClass::InitializeProperties(ScriptInstance aInstance)
 {
-    static UniversalRelocFunc<void (*)(CClass*, ScriptInstance)> initializeProperties(
-        Detail::AddressHashes::CClass_InitializeProperties);
+    static UniversalRelocFunc<void (*)(CClass*, ScriptInstance)> initializeProperties(Detail::AddressHashes::CClass_InitializeProperties);
     initializeProperties(this, aInstance);
 
     static UniversalRelocFunc<void (*)(CClass*, ScriptInstance)> assignDefaultValuesToProperties(
@@ -539,7 +538,7 @@ RED4EXT_INLINE bool RED4ext::CEnum::ToString(const ScriptInstance aInstance, CSt
 RED4EXT_INLINE bool RED4ext::CEnum::FromString(ScriptInstance aInstance, const CString& aString) const
 {
     using func_t = bool (*)(const CEnum*, ScriptInstance, const CString&);
-    UniversalRelocFunc<func_t> func(Detail::AddressHashes::CEnum_FromString);
+    static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CEnum_FromString);
     return func(this, aInstance, aString);
 }
 

@@ -56,8 +56,7 @@ RED4EXT_INLINE bool RED4ext::CBaseFunction::Execute(CStack* aStack)
     if (!flags.isNative)
     {
         using executeScriptedFn_t = bool (*)(CBaseFunction*, CStack*, void*);
-        static UniversalRelocFunc<executeScriptedFn_t> executeScriptedFn(
-            Detail::AddressHashes::CBaseFunction_ExecuteScripted);
+        static UniversalRelocFunc<executeScriptedFn_t> executeScriptedFn(Detail::AddressHashes::CBaseFunction_ExecuteScripted);
         return executeScriptedFn(this, aStack, nullptr);
     }
 

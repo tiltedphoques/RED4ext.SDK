@@ -37,14 +37,14 @@ constexpr std::uint32_t CClass_sub_90 = 0xA26D374E;
 constexpr std::uint32_t CClass_sub_98 = 0x48C020CA;
 constexpr std::uint32_t CClass_sub_A0 = 0x15F21D6F;
 constexpr std::uint32_t CClass_sub_B0 = 0xA0911974;
-constexpr std::uint32_t CClass_sub_C0 = 0x7DD010C3;
+constexpr std::uint32_t CClass_sub_C0 = 3523744305UL;
 constexpr std::uint32_t CClass_GetMaxAlignment = 0xD14E1230;
 constexpr std::uint32_t CClass_sub_D0 = 0x37750EBF;
 constexpr std::uint32_t CClass_CreateInstance = 0x5A800F1D;
 constexpr std::uint32_t CClass_GetProperty = 0x8F031512;
-constexpr std::uint32_t CClass_GetProperties = 0xB412121B;
+constexpr std::uint32_t CClass_GetProperties = 1652956141UL;
 constexpr std::uint32_t CClass_ClearScriptedData = 0x31F20E93;
-constexpr std::uint32_t CClass_InitializeProperties = 0xF4AC12B0;
+constexpr std::uint32_t CClass_InitializeProperties = 2257327441UL;
 constexpr std::uint32_t CClass_AssignDefaultValuesToProperties = 0x97DF1590;
 #pragma endregion
 
@@ -53,7 +53,7 @@ constexpr std::uint32_t CClassFunction_ctor = 0x602D29F3;
 #pragma endregion
 
 #pragma region CClassStaticFunction
-constexpr std::uint32_t CClassStaticFunction_ctor = 0x235013BB;
+constexpr std::uint32_t CClassStaticFunction_ctor = 2920426135UL;
 #pragma endregion
 
 #pragma region CEnum
@@ -63,7 +63,7 @@ constexpr std::uint32_t CEnum_FromString = 0x21CA1EC1;
 #pragma endregion
 
 #pragma region CGameEngine
-constexpr std::uint32_t CGameEngine = 0x97F209D6; // TODO: Check next update, there is hash conflict.
+constexpr std::uint32_t CGameEngine = 0x97F209D6;
 #pragma endregion
 
 #pragma region CGlobalFunction
@@ -124,7 +124,7 @@ constexpr std::uint32_t ISerializable_sub_C0 = 0x80201C35;
 #pragma endregion
 
 #pragma region JobDispatcher
-constexpr std::uint32_t JobDispatcher = 0xBAD50B3D; // TODO: Check next update, there is hash conflict.
+constexpr std::uint32_t JobDispatcher = 1508445968UL;
 constexpr std::uint32_t JobDispatcher_DispatchJob = 0x9C441E82;
 #pragma endregion
 
