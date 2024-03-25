@@ -129,9 +129,9 @@ RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_78()
     return true;
 }
 
-RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_80(int64_t a1, ScriptInstance aInstance)
+RED4EXT_INLINE bool RED4ext::CBaseRTTIType::sub_80(int64_t a1, const ScriptInstance aInstance) const
 {
-    using func_t = bool (*)(CBaseRTTIType*, int64_t, ScriptInstance);
+    using func_t = bool (*)(const CBaseRTTIType*, int64_t, const ScriptInstance);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CBaseRTTIType_sub_80);
     return func(this, a1, aInstance);
 }
@@ -261,9 +261,9 @@ RED4EXT_INLINE bool RED4ext::CClass::ToString(const ScriptInstance aInstance, CS
     return func(this, aInstance, aOut);
 }
 
-RED4EXT_INLINE bool RED4ext::CClass::sub_80(int64_t a1, ScriptInstance aInstance)
+RED4EXT_INLINE bool RED4ext::CClass::sub_80(int64_t a1, ScriptInstance aInstance) const
 {
-    using func_t = bool (*)(const CClass*, int64_t, ScriptInstance);
+    using func_t = bool (*)(const CClass*, int64_t, const ScriptInstance);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::CClass_sub_80);
     return func(this, a1, aInstance);
 }

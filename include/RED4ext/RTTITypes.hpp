@@ -62,7 +62,7 @@ struct CBaseRTTIType
     virtual bool ToString(const ScriptInstance aInstance, CString& aOut) const;                    // 68
     virtual bool FromString(ScriptInstance aInstance, const CString& aString) const;               // 70
     virtual bool sub_78();                                                                         // 78
-    virtual bool sub_80(int64_t a1, ScriptInstance aInstance);                                     // 80
+    virtual bool sub_80(int64_t a1, const ScriptInstance aInstance) const;                         // 80
     virtual bool sub_88(int64_t a1, ScriptInstance aInstance);                                     // 88
     virtual bool sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4);            // 90
     virtual bool sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5);   // 98
@@ -153,7 +153,7 @@ struct CClass : CBaseRTTIType
     void Destruct(ScriptInstance aMemory) const final;                                         // 40
     bool Unserialize(BaseStream* aStream, ScriptInstance aInstance, int64_t a3) const final;   // 60
     bool ToString(const ScriptInstance aInstance, CString& aOut) const final;                  // 68
-    bool sub_80(int64_t a1, ScriptInstance aInstance) final;                                   // 80
+    bool sub_80(int64_t a1, const ScriptInstance aInstance) const final;                       // 80
     bool sub_88(int64_t a1, ScriptInstance aInstance) final;                                   // 88
     bool sub_90(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4) final;          // 90
     bool sub_98(int64_t a1, ScriptInstance aInstance, CString& a3, int64_t a4, bool a5) final; // 98
