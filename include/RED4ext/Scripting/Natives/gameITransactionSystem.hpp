@@ -6,12 +6,21 @@
 #include <RED4ext/Scripting/Natives/Generated/game/IGameSystem.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/ItemObject.hpp>
 #include <RED4ext/Scripting/Natives/Generated/game/Object.hpp>
+#include <RED4ext/Scripting/Natives/gameAddItemToSlotContext.hpp>
+#include <RED4ext/Scripting/Natives/gameItemModParams.hpp>
 
 namespace RED4ext
 {
 namespace game
 {
 using AttachmentSlotDataPredicate = std::function<bool(const AttachmentSlotData&)>;
+
+enum class EInventoryOperationOverrides {
+    Unk0 = 0,
+    Unk1 = 1, // used in loop
+    Unk4 = 4, // game::Inventory::OnItemNotificationCallback
+    Unk8 = 8  // game::Inventory::QueueItemAddedEvent
+};
 
 struct ITransactionSystem : IGameSystem
 {
@@ -38,7 +47,7 @@ struct ITransactionSystem : IGameSystem
     virtual void sub_238() = 0;                                                                                  // 238
     virtual void sub_240() = 0;                                                                                  // 240
     virtual void sub_248() = 0;                                                                                  // 248
-    virtual void sub_250() = 0;                                                                                  // 250
+    virtual bool GiveItem(game::Object &, game::ItemModParams const &, game::EInventoryOperationOverrides = game::EInventoryOperationOverrides::Unk0) = 0;                                                                                  // 250
     virtual void sub_258() = 0;                                                                                  // 258
     virtual void sub_260() = 0;                                                                                  // 260
     virtual void sub_268() = 0;                                                                                  // 268
@@ -78,7 +87,7 @@ struct ITransactionSystem : IGameSystem
     virtual void sub_378() = 0;                                                                                  // 378
     virtual void sub_380() = 0;                                                                                  // 380
     virtual void sub_388() = 0;                                                                                  // 388
-    virtual void sub_390() = 0;                                                                                  // 390
+    virtual bool AddItemToSlot(game::AddItemToSlotContext const &) = 0;                                                                                  // 390
     virtual void sub_398() = 0;                                                                                  // 398
     virtual void sub_3A0() = 0;                                                                                  // 3A0
     virtual void sub_3A8() = 0;                                                                                  // 3A8
