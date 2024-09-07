@@ -2,6 +2,7 @@
 
 #include <RED4ext/Common.hpp>
 #include <cstdint>
+#include <string>
 #include <string_view>
 
 namespace RED4ext
