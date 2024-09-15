@@ -88,7 +88,7 @@ struct Widget : IScriptable
 
     Handle<PropertyManager> propertyManager;                      // 40
     HashMap<CName, CBaseFunction> scriptCallbacks;                // 50
-    SharedMutex scriptCallbacksMutex;                             // 80
+    SharedSpinLock scriptCallbacksMutex;                          // 80
     uint32_t unk84;                                               // 84  
     WidgetLayout layout;                                          // 88
     UITransform renderTransform;                                  // B8

@@ -76,7 +76,7 @@ struct __declspec(align(0x10)) TextWidget : ink::LeafWidget
     uint8_t unk380[162];                                            // 380
     uint8_t unk422;                                                 // 422
     uint8_t unk423;                                                 // 423
-    SharedMutex textMutex;                                          // 424
+    SharedSpinLock textMutex;                                       // 424
     uint8_t unk425[3];                                              // 425
     uint32_t unk428;                                                // 428
     uint8_t unk42C[4];                                              // 42C
