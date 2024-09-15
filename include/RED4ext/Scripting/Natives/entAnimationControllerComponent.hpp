@@ -80,7 +80,7 @@ RED4EXT_ASSERT_SIZE(LookAtController, 0x88);
 RED4EXT_ASSERT_OFFSET(LookAtController, animationControllerComponent, 0x00);
 RED4EXT_ASSERT_OFFSET(LookAtController, lookAtData, 0x20);
 RED4EXT_ASSERT_OFFSET(LookAtController, additionalLookAtData, 0x30);
-RED4EXT_ASSERT_OFFSET(LookAtController, lookAtParams, 0x30);
+RED4EXT_ASSERT_OFFSET(LookAtController, lookAtParams, 0x40);
 
 struct AnimationControllerComponent : ent::IComponent
 {
