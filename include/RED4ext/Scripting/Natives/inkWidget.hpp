@@ -111,8 +111,10 @@ struct Widget : IScriptable
     DynArray<void*> unk1D0;                                       // 1D0 size of 0x60
     HDRColor tintColor;                                           // 1E0
     float opacity;                                                // 1F0
-    SharedMutex parentMutex;                                      // 1F4
-    uint8_t unk1F4[0x1F8 - 0x1F5];                                // 1F5
+    SharedSpinLock parentLock;                                    // 1F4
+    SharedSpinLock unk1F5;                                        // 1F5
+    SharedSpinLock unk1F6;                                        // 1F6
+    SharedSpinLock userDataLock;                                  // 1F7
     bool visible;                                                 // 1F8
     bool canSupportFocus;                                         // 1F9
     bool fitToContent;                                            // 1FA

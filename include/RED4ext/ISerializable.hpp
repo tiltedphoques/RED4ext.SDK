@@ -51,7 +51,7 @@ struct ISerializable
 
     WeakHandle<ISerializable> ref;   // 00 - Initialized in Handle ctor
     WeakHandle<ISerializable> unk18; // 18
-    uint64_t unk28;                  // 28 - Incremental ID set in ISerializable ctor, can be zero
+    uint64_t unk28;                  // 28 - Global incremental ID, used in serialization
 };
 RED4EXT_ASSERT_SIZE(ISerializable, 0x30);
 } // namespace RED4ext

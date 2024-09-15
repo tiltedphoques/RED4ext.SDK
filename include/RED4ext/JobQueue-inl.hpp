@@ -92,7 +92,7 @@ RED4EXT_INLINE void RED4ext::JobQueue::Wait(JobHandle& aJob)
     unk10.Join(aJob);
 }
 
-RED4EXT_INLINE [[nodiscard]] RED4ext::JobHandle RED4ext::JobQueue::Capture()
+[[nodiscard]] RED4EXT_INLINE RED4ext::JobHandle RED4ext::JobQueue::Capture()
 {
     using func_t = JobHandle* (*)(JobQueue*, JobHandle*);
     static UniversalRelocFunc<func_t> func(Detail::AddressHashes::JobQueue_Capture);
@@ -100,7 +100,7 @@ RED4EXT_INLINE [[nodiscard]] RED4ext::JobHandle RED4ext::JobQueue::Capture()
     JobHandle handle{};
     func(this, &handle);
 
-    return std::move(handle);
+    return handle;
 }
 
 RED4EXT_INLINE void RED4ext::JobQueue::DispatchJob(const JobInstance& aJob)
