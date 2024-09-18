@@ -8,18 +8,20 @@
 #include <RED4ext/Common.hpp>
 #include <RED4ext/Scripting/Natives/Generated/FixedPoint.hpp>
 
+#include <RED4ext/Scripting/Natives/WorldPosition.hpp>
+
 namespace RED4ext
 {
-struct WorldPosition
-{
-    static constexpr const char* NAME = "WorldPosition";
-    static constexpr const char* ALIAS = NAME;
+// struct WorldPosition
+// {
+//     static constexpr const char* NAME = "WorldPosition";
+//     static constexpr const char* ALIAS = NAME;
 
-    FixedPoint x; // 00
-    FixedPoint y; // 04
-    FixedPoint z; // 08
-};
-RED4EXT_ASSERT_SIZE(WorldPosition, 0xC);
+//     FixedPoint x; // 00
+//     FixedPoint y; // 04
+//     FixedPoint z; // 08
+// };
+// RED4EXT_ASSERT_SIZE(WorldPosition, 0xC);
 } // namespace RED4ext
 
 // clang-format on
