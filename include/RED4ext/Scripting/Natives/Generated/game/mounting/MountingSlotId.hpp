@@ -17,6 +17,8 @@ struct MountingSlotId
     static constexpr const char* NAME = "gamemountingMountingSlotId";
     static constexpr const char* ALIAS = "MountingSlotId";
 
+    MountingSlotId(CName _id) : id(_id) {}
+
     CName id; // 00
 };
 RED4EXT_ASSERT_SIZE(MountingSlotId, 0x8);
