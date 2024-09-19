@@ -17,6 +17,7 @@ struct MountingSlotId
     static constexpr const char* NAME = "gamemountingMountingSlotId";
     static constexpr const char* ALIAS = "MountingSlotId";
 
+    MountingSlotId() {}
     MountingSlotId(CName _id) : id(_id) {}
 
     CName id; // 00
