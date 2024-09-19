@@ -177,6 +177,10 @@ struct RigidBody
     Vector3 centerOfMass;
 };
 
+struct RuntimeData {
+
+};
+
 struct BaseObject : game::Object
 {
     static constexpr const char* NAME = "vehicleBaseObject";
@@ -184,7 +188,8 @@ struct BaseObject : game::Object
 
     uint8_t unk240[0x25C - 0x240]; // 240
     bool isOnGround;               // 25C
-    uint8_t unk25D[0x264 - 0x25D]; // 25D
+    uint8_t unk25D[0x260 - 0x25D]; // 25D
+    uint32_t physicsState;         // 260
     float acceleration;            // 264
     float deceleration;            // 268
     uint8_t unk26C[0x2A3 - 0x26C]; // 26C
@@ -192,7 +197,7 @@ struct BaseObject : game::Object
     uint8_t unk2A4[0x2BC - 0x2A4]; // 2A4
     float burnout;                 // 2BC
     uint8_t unk2C0[0x2C8 - 0x2C0]; // 2C0
-    SuspensionBase * suspension;             // 2C8
+    SuspensionBase * suspension;   // 2C8
     RigidBody * rigidBody;         // 2D0
 
     Handle<ISerializable> curveSetData;  // 2D8
@@ -203,7 +208,11 @@ struct BaseObject : game::Object
 
     uint8_t unk360[0x3A0 - 0x360]; // 360
     Ref<AI::Archetype> archetype;  // 3A0
-    uint8_t unk3B8[0x6D2 - 0x3B8]; // 3B8
+
+    uint8_t unk3B8[0x5D0 - 0x3B8]; // 3B8
+    RuntimeData *runtimeData;      // 5D0
+    uint8_t unk5D8[0x6D2 - 0x5D8]; // 5D8
+
     bool isVehicleOnStateLocked;   // 6D2
     uint8_t unk6D3[0xB90 - 0x6D3]; // 6D3
 };
