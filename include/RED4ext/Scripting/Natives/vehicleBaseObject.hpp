@@ -92,6 +92,7 @@ struct SuspensionBase {
     uint8_t unk70;
     uint8_t unk71[7];
     uint64_t unk78;
+    // last transform? used in forceMoveTo to determine speed
     WorldTransform worldTransform2; // 80
     // Set to 1.0 when awake, counts down when sleep conditions are met - when
     // 0.0, vehicle enters sleep state, and is set to -1.0
@@ -178,6 +179,12 @@ struct RigidBody
 };
 
 struct RuntimeData {
+  Vector4 unk00;
+  WorldTransform transform;
+  Vector4 linearVelocity;
+  Vector4 linearAcceleration;
+  float unk50[30];
+  float driveSpeedSigned;
 
 };
 
@@ -192,7 +199,13 @@ struct BaseObject : game::Object
     uint32_t physicsState;         // 260
     float acceleration;            // 264
     float deceleration;            // 268
-    uint8_t unk26C[0x2A3 - 0x26C]; // 26C
+    float handbrake;               // 26C
+    float strafeY;                 // 270
+    float strafeX;                 // 274
+    float turnInput;               // 278
+    float leanFB;                  // 27C
+    float rockFB;                  // 280
+    uint8_t unk26C[0x2A3 - 0x284]; // 284
     bool isReversing;              // 2A3
     uint8_t unk2A4[0x2BC - 0x2A4]; // 2A4
     float burnout;                 // 2BC
