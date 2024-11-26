@@ -29,10 +29,7 @@ using FixedTypeMapping = std::unordered_map<RED4ext::CName, std::string, RED4ext
 
 static constexpr const char* INVALID_CHARACTERS = R"(-|'|\(|\)|\]|\[|/|\.|\s|:)";
 static constexpr const char* INVALID_KEYWORDS =
-    R"(\bregister\b|\bbool\b|\bint\b|\btemplate\b|\btrue\b|\bfalse\b|\bsmall\b|\bPlane\b)"; // small conflicts with
-                                                                                            // windows macro, Plane
-                                                                                            // conflicts with itself as
-                                                                                            // a type name
+    R"(\bregister\b|\bbool\b|\bint\b|\btemplate\b|\bdefault\b|\btrue\b|\bfalse\b|\bsmall\b|\bswitch\b|\bPlane\b)";
 
 struct ClassFileDescriptor
 {

@@ -195,5 +195,14 @@ constexpr std::uint32_t TweakDB_CreateRecord = 0x3201127A;
 constexpr std::uint32_t UpdateRegistrar_RegisterGroupUpdate = 0xFD914605;
 constexpr std::uint32_t UpdateRegistrar_RegisterBucketUpdate = 0x192F4EA2;
 #pragma endregion
+
+#pragma region DeferredDataBuffer
+constexpr std::uint32_t DeferredDataBuffer_LoadAsync = 4125893577;
+constexpr std::uint32_t DeferredDataBuffer_LoadRefAsync = 1459046115;
+#pragma endregion
+
+#pragma region LaunchParameters
+constexpr std::uint32_t LaunchParameters = 677908004;
+#pragma endregion
 }
 // clang-format on
